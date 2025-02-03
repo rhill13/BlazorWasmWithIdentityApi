@@ -63,3 +63,15 @@
     app.UseSwagger();
     app.UseSwaggerUI();
 ```
+
+## Perform Migrations
+### Connection string
+1. Add Connection string to appsettings.json
+```
+    "ConnectionStrings": {
+        "DefaultConnection": "Data Source=Data/identity.db"
+    }
+```
+### Migrate (perform in the project root)
+1. `dotnet ef migrations add {name of migration}`
+2. `dotnet ef database update`
